@@ -15,7 +15,7 @@ export default createStore({
 
     registeredUsers: [{name: 'a', username: 'a', email: 'a@a.com', password: 'aaaaa'}],
     loggedIn: false,
-    currentUser: "",
+    currentUser: ""
   },
 
   getters: {
@@ -37,6 +37,9 @@ export default createStore({
     },
     viewMoreGames(state) {
       state.gamesPage++
+    },
+    fetchCurrentGameMut(state, currentGameData) {
+      state.currentGame = currentGameData;
     },
     swapSignupModal(state) {
       state.showSignupModal = !state.showSignupModal;
@@ -95,9 +98,6 @@ export default createStore({
       router.push({ name: "home" });
       alert("User logged out");
     },
-    fetchCurrentGameMut(state, currentGameData) {
-      state.currentGame = currentGameData;
-    }
   },
   actions: {
     async fetchGamesAct({ commit }, gamesPage) {

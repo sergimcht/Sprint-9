@@ -8,10 +8,7 @@ import GamesComp from '@/components/GamesComp.vue'
 import CarouselComp from '@/components/CarouselComp.vue'
   
   export default {
-    components: {
-      GamesComp,
-      CarouselComp
-    }
+    components: { GamesComp, CarouselComp }
   }
 </script>
 

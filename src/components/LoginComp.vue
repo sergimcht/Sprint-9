@@ -1,20 +1,20 @@
 <template>
     <div class="modal-wrapper">
-        <div class="modal">
-            <h2>WELCOME BACK</h2>
-            <div class="close-modal" @click="swapLoginModal">
-                <font-awesome-icon icon="fa-solid fa-xmark" />
-            </div>
-            <div class="form-container">
-                <form class="form" @submit.prevent="validateAndLogin">
-                    <input type="text" placeholder="Username" v-model="username" ref="lastName" />
-                    <p class="error">{{ usernameError }}</p>
-                    <input type="password" placeholder="Password" v-model="password" ref="password" autocomplete="on"/>
-                    <p class="error">{{ passwordError }}</p>
-                    <button>CONTINUE</button>
-                </form>
-                <div class="swap-modal">
-                    <p>Don't have an account? <a href="#" @click="swapModals">Sign up</a></p>
+        <div class="modal-body">
+            <div class="modal-info">
+                <h2>WELCOME BACK</h2>
+                <div class="close-modal" @click="swapLoginModal" ><font-awesome-icon icon="fa-solid fa-xmark" /></div>
+                <div class="form-container">
+                    <form class="form" @submit.prevent="validateAndLogin">
+                        <input type="text" placeholder="Username" v-model="username" ref="lastName" />
+                        <p class="error">{{ usernameError }}</p>
+                        <input type="password" placeholder="Password" v-model="password" ref="password" />
+                        <p class="error">{{ passwordError }}</p>
+                        <button>CONTINUE</button>
+                    </form>
+                    <div class="swap-modal">
+                        <p>Don't have an account? <a href="#" @click="swapModals">Sign up</a></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -63,3 +63,7 @@ export default {
     },
 }}
 </script>
+
+<style>
+
+</style>

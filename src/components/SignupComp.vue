@@ -1,24 +1,24 @@
 <template>
     <div class="modal-wrapper">
-        <div class="modal">
-            <h2>CREATE YOUR ACCOUNT</h2>
-            <div class="close-modal" @click="swapSignupModal">
-                <font-awesome-icon icon="fa-solid fa-xmark" />
-            </div>
-            <div class="form-container">
-                <form class="form" @submit.prevent="validateAndAdd">
-                    <input type="text" placeholder="Name" v-model="name" ref="name" />
-                    <p class="error">{{ nameError }}</p>
-                    <input type="text" placeholder="Username" v-model="username" ref="lastName" />
-                    <p class="error">{{ usernameError }}</p>
-                    <input type="text" placeholder="Email Address" v-model="email" ref="email" />
-                    <p class="error">{{ emailError }}</p>
-                    <input type="password" placeholder="Password" v-model="password" ref="password" autocomplete="on"/>
-                    <p class="error">{{ passwordError }}</p>
-                    <button>CONTINUE</button>
-                </form>
-                <div class="swap-modal">
-                    <p>Already have an account?  <a href="#" @click="swapModals">Log in</a></p>
+        <div class="modal-body">
+            <div class="modal-info">
+                <h2>CREATE YOUR ACCOUNT</h2>
+                <div class="close-modal" @click="swapSignupModal"><font-awesome-icon icon="fa-solid fa-xmark" /></div>
+                <div class="form-container">
+                    <form class="form" @submit.prevent="validateAndAdd">
+                        <input type="text" placeholder="Name" v-model="name" ref="name" />
+                        <p class="error">{{ nameError }}</p>
+                        <input type="text" placeholder="Username" v-model="username" ref="lastName" />
+                        <p class="error">{{ usernameError }}</p>
+                        <input type="text" placeholder="Email Address" v-model="email" ref="email" />
+                        <p class="error">{{ emailError }}</p>
+                        <input type="password" placeholder="Password" v-model="password" ref="password" />
+                        <p class="error">{{ passwordError }}</p>
+                        <button>CONTINUE</button>
+                    </form>
+                    <div class="swap-modal">
+                        <p>Already have an account?  <a href="#" @click="swapModals">Log in</a></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -93,3 +93,7 @@ export default {
     },
 };
 </script>
+
+<style>
+
+</style>
