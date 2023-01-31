@@ -1,16 +1,10 @@
 <template>
     <div class="footer">
-      <div class="follow-container">
-        <div class="follow-gp">FOLLOW GAME PLAY:</div>
-        <div class="icons">
-          <font-awesome-icon icon="fa-brands fa-discord" />
-          <font-awesome-icon icon="fa-brands fa-twitter" />
-          <font-awesome-icon icon="fa-brands fa-instagram" />
-          <font-awesome-icon icon="fa-brands fa-tiktok" />
-          <font-awesome-icon icon="fa-brands fa-vk" />
-        </div>
+      <div class="data-provider-container">
+        <span>Data Provider:<br></span>
+        <img alt="RAWG_logo" src="../assets/RAWG_logo.png" style="height: 1.5rem"/>
         <div class="copyright">
-          <sup>© 2023 Game Play</sup>
+          <sup>https://rawg.io/</sup>
         </div>
       </div>
       <div class="about-container">
@@ -22,11 +16,17 @@
           <a href="#">Contact</a>
         </div>
       </div>
-      <div class="data-provider-container">
-        <span>Data Provider:<br></span>
-        <img alt="RAWG_logo" src="../assets/RAWG_logo.png" style="height: 1.5rem"/>
+      <div class="follow-container">
+        <div class="follow-gp">FOLLOW GAME PLAY:</div>
+        <div class="icons">
+          <font-awesome-icon icon="fa-brands fa-discord" />
+          <font-awesome-icon icon="fa-brands fa-twitter" />
+          <font-awesome-icon icon="fa-brands fa-instagram" />
+          <font-awesome-icon icon="fa-brands fa-tiktok" />
+          <font-awesome-icon icon="fa-brands fa-vk" />
+        </div>
         <div class="copyright">
-          <sup>https://rawg.io/</sup>
+          <sup>© 2023 Game Play</sup>
         </div>
       </div>
     </div>
@@ -52,6 +52,13 @@
     flex-flow: row nowrap;
     justify-content: center;
     gap: 0 .8rem;
+  }
+  @media only screen and (max-width: 420px) {
+    .footer {
+      flex-flow: column nowrap;
+      align-items: center;
+      gap: .3rem;
+    }
   }
   </style>
   
