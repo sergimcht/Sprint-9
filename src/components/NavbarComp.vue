@@ -141,7 +141,7 @@ export default {
 }
 .form input:focus-visible {
     outline: 2px solid var(--bs-link-color);
-    background: rgba(255, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.2);
     color: white;
 }
 

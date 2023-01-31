@@ -134,4 +134,30 @@ export default {
 .array-name {
   color: var(--bs-link-color);
 }
+
+@media only screen and (max-width: 420px) {
+  .game-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 5fr 1fr;
+    grid-column-gap: 3px;
+    grid-row-gap: 3px;
+    margin: 0 .2rem;
+    margin-bottom: 0;
+  }
+
+  .game-image {
+    grid-area: 1 / 1 / 2 / 2; 
+  }
+  .game-info { 
+    grid-area: 2 / 1 / 3 / 2;
+    padding: 1rem;
+  }
+  .game-description { 
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .game-more-info-container { 
+    grid-area: 4 / 1 / 5 / 2;
+  }
+}
 </style>
